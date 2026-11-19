@@ -1,6 +1,6 @@
 name = "story-review-stranger"
 description = "Cold-reads a novel's premise, outline, synopsis or chapters as a reader with no story bible: what confuses, what gets assumed, where interest drops. Use only when asked for a cold, fresh-eyes, first-reader or beta-reader read; a chapter review that names no lens is story-review-stylist's. Pass only file paths or the text itself; say nothing about the story, since anything you explain it cannot report as unclear. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

@@ -1,6 +1,6 @@
 name = "codex-whisperer"
 description = "Reviews the files that instruct Codex in a project - AGENTS.md, skills, custom agents, command rules, hooks and configuration - for whether each fits its purpose, will be understood and followed, and is worth the context it costs. Use after writing or changing any of these files, or to audit a project's Codex setup. Name the files or paste the diff. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

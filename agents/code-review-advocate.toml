@@ -1,6 +1,6 @@
 name = "code-review-advocate"
 description = "Checks a code change against what was asked for: requirements missed, misread or partly met, and unrequested work. Use only when asked whether it meets a request, ticket, spec or plan; a code review that only mentions a ticket is code-review-sleuth's. Pass the request or say where it is written. Name the change, or it reviews uncommitted work, then the current branch. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

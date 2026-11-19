@@ -1,6 +1,6 @@
 name = "story-review-stylist"
 description = "Reviews a novel's manuscript prose sentence by sentence against the author's own voice: clarity, rhythm, word choice, point of view, tense, pacing within a scene. Use for a prose, line or style review, or to review a chapter or scene when no lens is named. Name chapters, or paste text or a diff. Not for copyedits or AI-sounding text. Describes problems; never rewrites. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

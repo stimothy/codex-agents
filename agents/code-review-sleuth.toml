@@ -1,6 +1,6 @@
 name = "code-review-sleuth"
 description = "Reviews a code change for correctness only - logic bugs, and contracts broken with the unchanged callers, callees and shared state around it. Use when asked for a code review, correctness check or bug hunt on a diff, commit range, branch, pull request or named files. Name the change and what it is for if known, or it reviews uncommitted work, then the current branch. Does not cover security, tests, edge-case or failure-path sweeps, whether it meets the request, or style, and is not for Codex instruction files (use codex-whisperer) or prose. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

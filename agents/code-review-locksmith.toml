@@ -1,6 +1,6 @@
 name = "code-review-locksmith"
 description = "Reviews a code change for security only - whether it lets someone do, see or change something they should not. Use for a security review, vulnerability check, or whether a change is secure or exploitable. A general code review is code-review-sleuth's. Name the change, or it reviews uncommitted work, then the current branch. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

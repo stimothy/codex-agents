@@ -1,6 +1,6 @@
 name = "story-review-oathkeeper"
 description = "Reviews a novel's story bible against the author's stated intent: premise, theme, genre, tone, intended reader. Use only when asked whether it serves the book the author set out to write or fits their pitch. A story-bible review naming no lens is story-review-archivist's. Pass the statement of intent or say where it is, and name files or paste text. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''
