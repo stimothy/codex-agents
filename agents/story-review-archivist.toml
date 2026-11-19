@@ -1,6 +1,6 @@
 name = "story-review-archivist"
 description = "Reviews a novel's story bible (or series bible, worldbuilding or lore notes) for continuity: contradictions between stated facts. Use to review one, including its plot outline, even when no lens is named, or to check a chapter against it. Name files, or paste text or a diff. Continuity only; the other lenses are the other story-review agents. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

@@ -1,6 +1,6 @@
 name = "codex-wordsmith"
 description = "Writes and edits the files that instruct Codex in a project - AGENTS.md, skills and custom agent definitions. Use to create one of these files or to add, change or tighten instructions in one. Tell it the behaviour you want from Codex and why, and name any file it should change."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

@@ -1,6 +1,6 @@
 name = "story-review-cartographer"
 description = "Reviews a novel's story bible for coverage: what the outline needs that the bible never states (missing facts, not loopholes), and material the story never uses. Use only when asked for gaps in the bible, missing or unused material, or overbuilt worldbuilding. A story-bible review naming no lens is story-review-archivist's. For a change, name the files or paste text or a diff. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

@@ -1,6 +1,6 @@
 name = "story-review-shrink"
 description = "Reviews a novel's story bible for character: whether wants, fears and beliefs would make people do what the outline needs, and whether a chapter keeps them in character; arcs nothing causes; characters who only move the plot. Use only when asked about characters, motivation or arcs. A story-bible review naming no lens is story-review-archivist's. Name files or paste text or a diff. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

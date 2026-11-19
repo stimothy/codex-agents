@@ -1,6 +1,6 @@
 name = "story-review-scholar"
 description = "Reviews a novel's story bible, outline or chapters against the real world: history, science, medicine, law, geography, trades. Use only when asked to fact-check, check research or anachronisms, or review real-world accuracy. A story-bible review naming no lens is story-review-archivist's. Name files, or paste text or a diff. Flags uncertain claims for verification. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

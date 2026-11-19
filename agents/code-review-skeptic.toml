@@ -1,6 +1,6 @@
 name = "code-review-skeptic"
 description = "Sees only a code diff, assumes it is wrong, reports only critical or high problems, each with one thing to check. Use when asked for a blind, cold or diff-only read; a general code review is code-review-sleuth's. Name the change, or it reads uncommitted work, then the current branch. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

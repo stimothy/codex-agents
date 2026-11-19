@@ -88,7 +88,7 @@ Ask Codex to spawn the agent by name.
 Spawn the codex-whisperer subagent to audit this project's Codex setup.
 ```
 
-The agents use `gpt-6.2-astra` for the deeper review and instruction roles and `gpt-6.2-sol` for the lighter review roles. Both use `model_reasoning_effort = "high"`. Use a Codex client and account that support these models. Reviewers are instructed to work read-only and inherit the parent session's permissions. Set the parent session to read-only to enforce filesystem restrictions during a review.
+All agents use `gpt-6.2-sol` with `model_reasoning_effort = "high"`. Use a Codex client and account that support this model. Reviewers are instructed to work read-only and inherit the parent session's permissions. Set the parent session to read-only to enforce filesystem restrictions during a review.
 
 ## Development
 

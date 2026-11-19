@@ -1,6 +1,6 @@
 name = "story-review-turing"
 description = "Reviews a novel's story bible or manuscript for machine-patterned writing: the wording, constructions, punctuation, default names and stock details that make text read as AI-written. Use only when asked to check for AI-isms or whether text reads as human or machine-written. A story-bible review naming no lens is story-review-archivist's. Name files or paste text. Not for prose quality. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

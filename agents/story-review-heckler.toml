@@ -1,6 +1,6 @@
 name = "story-review-heckler"
 description = "Reviews a novel's story bible for rule implications: what the world's stated rules and characters' abilities imply that the plot ignores or cannot survive. Use only for plot holes the world's rules create, loopholes, 'why doesn't someone just' holes, or whether a magic system, technology or institution holds up. A story-bible review naming no lens is story-review-archivist's. Name files, or paste text or a diff. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

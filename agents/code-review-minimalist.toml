@@ -1,6 +1,6 @@
 name = "code-review-minimalist"
 description = "Reviews a change to code (not Codex instruction files) for simplicity and maintainability only. Use when asked for a simplicity, maintainability, readability or design review, or whether a change is over-engineered; a code review with no lens named goes to code-review-sleuth. Name the change, or it reviews uncommitted work, then the current branch. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''

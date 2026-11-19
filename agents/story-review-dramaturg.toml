@@ -1,6 +1,6 @@
 name = "story-review-dramaturg"
 description = "Reviews a novel's plot outline, synopsis, chapter plan or drafted chapters for structure: whether events cause one another, coincidence, rising stakes, setup and payoff, pacing across scenes and chapters, an earned ending. Use only when asked for a structural or pacing review. A story-bible review naming no lens is story-review-archivist's. Name the files or paste them. Read-only."
-model = "gpt-6.2-astra"
+model = "gpt-6.2-sol"
 model_reasoning_effort = "high"
 
 developer_instructions = '''
