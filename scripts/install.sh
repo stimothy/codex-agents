@@ -49,7 +49,10 @@ while [ $# -gt 0 ]; do
 done
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
-src_dir="$(cd "$script_dir/../agents" && pwd -P)"
+src_dir="${script_dir%/*}/agents"
+if [ -d "$src_dir" ]; then
+  src_dir="$(cd "$src_dir" && pwd -P)"
+fi
 dest_dir="${CODEX_HOME:-$HOME/.codex}/agents"
 
 # The manifest records what this script installed: one line per agent, holding
@@ -63,7 +66,7 @@ shopt -s nullglob
 agents=("$src_dir"/*.toml)
 shopt -u nullglob
 
-if [ ${#agents[@]} -eq 0 ]; then
+if [ "$action" = "install" ] && [ ${#agents[@]} -eq 0 ]; then
   echo "No agent files found in $src_dir" >&2
   exit 1
 fi
@@ -122,7 +125,7 @@ is_ours() {
   fi
 
   if [ -f "$dest" ]; then
-    if cmp -s "$src" "$dest"; then
+    if [ -n "$src" ] && cmp -s "$src" "$dest"; then
       return 0
     fi
     if [ "$kind" = "copy" ] && [ "$(checksum "$dest")" = "$value" ]; then
@@ -181,9 +184,7 @@ install_agent() {
 }
 
 uninstall_agent() {
-  local src="$1" name dest
-  name="$(basename "$src")"
-  dest="$dest_dir/$name"
+  local name="$1" src="$2" dest="$dest_dir/$1"
 
   if ! exists "$dest"; then
     forget "$name"
@@ -209,9 +210,25 @@ if [ "$action" = "install" ]; then
 else
   echo "Removing agents from $dest_dir"
   if [ -d "$dest_dir" ]; then
-    for src in "${agents[@]}"; do
-      uninstall_agent "$src"
-    done
+    if [ ${#agents[@]} -gt 0 ]; then
+      for src in "${agents[@]}"; do
+        uninstall_agent "${src##*/}" "$src"
+      done
+    fi
+    if [ -f "$manifest" ]; then
+      # The loop reads the opened manifest while forget replaces it by rename.
+      while IFS= read -r entry; do
+        name="${entry%%"$tab"*}"
+        case "$name" in
+          */*|.*) continue ;;
+          *.toml)
+            if ! exists "$src_dir/$name"; then
+              uninstall_agent "$name" ""
+            fi
+            ;;
+        esac
+      done <"$manifest"
+    fi
   fi
   echo "Removed $done_count, skipped $skipped_count."
 fi

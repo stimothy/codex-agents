@@ -33,6 +33,7 @@ By default, the script protects existing files it does not recognise as its own.
 - A copy you have edited is treated as yours. It is skipped, not overwritten or removed, unless you pass `--force`.
 - A symlink that points somewhere else is left alone, even when its target is missing.
 - If you move the clone, run the script again from the new location and it repairs its own links.
+- Uninstall checks the manifest for agents whose source files were renamed or removed.
 
 The script exits with status 1 when it skipped anything, so you can tell a partial install from a complete one.
 

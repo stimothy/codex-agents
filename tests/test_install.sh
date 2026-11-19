@@ -354,6 +354,38 @@ test_uninstall_removes_copies() {
   assert_absent "$dest/alpha.toml"
 }
 
+test_uninstall_removes_link_for_renamed_agent() {
+  run_install
+  mv "$fixture/agents/alpha.toml" "$fixture/agents/renamed.toml"
+  run_install --uninstall
+  assert_status 0
+  assert_absent "$dest/alpha.toml"
+  assert_absent "$dest/beta.toml"
+  assert_absent "$manifest"
+}
+
+test_uninstall_removes_copies_without_a_source_directory() {
+  run_install --copy
+  mv "$fixture/agents" "$work/removed-agents"
+  run_install --uninstall
+  assert_status 0
+  assert_absent "$dest/alpha.toml"
+  assert_absent "$dest/beta.toml"
+  assert_absent "$manifest"
+}
+
+test_uninstall_preserves_edited_copy_for_removed_agent() {
+  run_install --copy
+  rm "$fixture/agents/alpha.toml"
+  printf 'my own edits\n' >"$dest/alpha.toml"
+  run_install --uninstall
+  assert_status 1
+  assert_contains "$err" "skipped  alpha.toml"
+  assert_content "$dest/alpha.toml" "my own edits"
+  assert_absent "$dest/beta.toml"
+  assert_contains "$(cat "$manifest")" "alpha.toml"
+}
+
 test_uninstall_leaves_foreign_files() {
   mkdir -p "$dest"
   printf 'someone else\n' >"$dest/alpha.toml"
